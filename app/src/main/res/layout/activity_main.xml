@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background2"
+    tools:context=".MainActivity">
+
+    <com.mikhaellopez.circularimageview.CircularImageView
+        android:layout_width="210dp"
+        android:layout_height="210dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        app:civ_border_color="#07ffe2"
+        app:civ_border_width="5dp"
+        app:civ_shadow="true"
+        android:src="@drawable/happyicon" />
+
+    <TextView
+        android:id="@+id/songname"
+        android:layout_width="320dp"
+        android:layout_height="28dp"
+        android:textSize="20dp"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        android:textColor="#fa620a"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="38dp"
+        android:layout_marginBottom="231dp"
+        android:layout_alignParentLeft="true" />
+    <SeekBar
+        android:id="@+id/seekbar1"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="182dp"
+        android:padding="3dp" />
+
+    <TextView
+        android:id="@+id/time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/seekbar1"
+        android:layout_below="@+id/seekbar1"
+        android:layout_marginTop="-182dp"
+        android:text="00:00"
+        android:textColor="#262524"
+
+        android:textSize="17dp"
+        android:textStyle="bold"
+        android:layout_alignLeft="@+id/seekbar1" />
+
+    <TextView
+        android:id="@+id/remtime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/seekbar1"
+        android:layout_below="@+id/seekbar1"
+        android:layout_marginTop="-182dp"
+        android:text="00:00"
+        android:textColor="#000000"
+        android:textSize="17dp"
+        android:textStyle="bold"
+        android:layout_alignRight="@+id/seekbar1" />
+
+
+    <Button
+        android:id="@+id/playbutton"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_above="@+id/stopbutton"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/ic_play_arrow_black_24dp" />
+
+    <Button
+        android:id="@+id/stopbutton"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="26dp"
+        android:background="@drawable/ic_stop_black_24dp" />
+
+    <Button
+        android:id="@+id/nexttrack"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="42dp"
+        android:layout_toEndOf="@+id/playbutton"
+        android:background="@drawable/ic_skip_next_black_24dp"
+        android:layout_toRightOf="@+id/playbutton" />
+
+    <Button
+        android:id="@+id/pretrack"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignTop="@+id/nexttrack"
+        android:layout_toStartOf="@+id/playbutton"
+        android:background="@drawable/ic_skip_previous_black_24dp"
+        android:layout_toLeftOf="@+id/playbutton" />
+
+    <Button
+        android:id="@+id/slistbutton"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_alignBottom="@+id/nexttrack"
+        android:layout_alignParentEnd="true"
+        android:background="@drawable/ic_format_list_bulleted_black_24dp"
+        android:onClick="onClick"
+        android:layout_alignParentRight="true" />
+
+
+</RelativeLayout>
